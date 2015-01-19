@@ -73,7 +73,7 @@ table#movies th, table#movies td {
 }
 
 #notice, #warning {
-  background: rosybrown;
+  background: roosybrown;
   margin: 1em 0;
   padding: 4px;
 }
