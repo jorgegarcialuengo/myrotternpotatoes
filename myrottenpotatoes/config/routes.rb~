@@ -1,6 +1,6 @@
 Myrottenpotatoes::Application.routes.draw do
 
-	resources :movies #try to call the index action in moview controller
+	resources :movies #set up a group of routes for CRUD actions on a RESTful resource
 	root :to => redirect('/movies')
 
 

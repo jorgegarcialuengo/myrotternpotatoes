@@ -7,6 +7,10 @@ gem 'rails', '3.2.16'
 
 gem 'sqlite3'
 
+# authentication process
+gem 'omniauth'
+gem 'omniauth-twitter'
+
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -23,7 +27,7 @@ end
 gem 'jquery-rails'
 
 # use Halm for templates
-gem 'halm'
+gem 'haml'
 
 # use Ruby debugger
 group :development, :test do
