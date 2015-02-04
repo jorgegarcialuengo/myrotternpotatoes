@@ -1,11 +1,16 @@
 Myrottenpotatoes::Application.routes.draw do
 
-  resources :movies #set up a group of routes for CRUD actions on a RESTful resource
+  resources :movies do
+    resources :reviews
+  end
+
   root :to => redirect('/movies')
 
   get 'auth/:provider/callback' => 'sessions#create'
   post 'logout' => 'sessions#destroy'
   get 'auth/failure' => 'sessions#failure'
+
+
 
 
 

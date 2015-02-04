@@ -1,4 +1,6 @@
 class Movie < ActiveRecord::Base
+
+  has_many :reviews
   attr_accessible :title, :rating, :description, :release_date
 
   def self.all_ratings ; %w[G PG PG-13 R NC-17] ; end # shortcut: array of strings
@@ -22,7 +24,7 @@ class Movie < ActiveRecord::Base
   before_save :capitalize_title
   def capitalize_title
     self.title = self.title.split(/\s+/).map(&:downcase).
-      map(&:capitalize).(join(' ')
+      map(&:capitalize).join(' ')
   end
 end
 
